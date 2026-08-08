@@ -1,0 +1,1 @@
+- [Managed Clerk auth](clerk-auth.md) — Dooli uses Replit-managed Clerk with browser cookie sessions and user-scoped local MVP data.

@@ -36,27 +36,27 @@
 }
 
 :root {
-  --background: 39 43% 95%;
-  --foreground: 226 27% 18%;
-  --border: 34 24% 85%;
-  --input: 34 24% 85%;
-  --ring: 10 72% 55%;
-  --card: 42 47% 98%;
-  --card-foreground: 226 27% 18%;
-  --card-border: 34 24% 85%;
-  --popover: 42 47% 98%;
-  --popover-foreground: 226 27% 18%;
-  --popover-border: 34 24% 85%;
-  --primary: 10 72% 55%;
-  --primary-foreground: 42 47% 98%;
-  --secondary: 147 18% 85%;
-  --secondary-foreground: 157 28% 22%;
-  --muted: 38 31% 90%;
-  --muted-foreground: 224 12% 48%;
-  --accent: 44 88% 67%;
-  --accent-foreground: 226 27% 18%;
-  --destructive: 0 65% 52%;
-  --destructive-foreground: 42 47% 98%;
+  --background: 36 43% 94%;
+  --foreground: 230 28% 14%;
+  --border: 35 24% 82%;
+  --input: 35 24% 82%;
+  --ring: 9 100% 65%;
+  --card: 38 48% 98%;
+  --card-foreground: 230 28% 14%;
+  --card-border: 35 24% 82%;
+  --popover: 38 48% 98%;
+  --popover-foreground: 230 28% 14%;
+  --popover-border: 35 24% 82%;
+  --primary: 9 100% 65%;
+  --primary-foreground: 230 28% 14%;
+  --secondary: 164 22% 79%;
+  --secondary-foreground: 164 29% 20%;
+  --muted: 34 29% 88%;
+  --muted-foreground: 228 10% 46%;
+  --accent: 46 96% 68%;
+  --accent-foreground: 230 28% 14%;
+  --destructive: 0 67% 52%;
+  --destructive-foreground: 38 48% 98%;
   --app-font-sans: 'DM Sans', sans-serif;
   --app-font-serif: 'Instrument Serif', Georgia, serif;
   --app-font-mono: 'Space Mono', monospace;
@@ -66,27 +66,27 @@
 }
 
 .dark {
-  --background: 226 27% 12%;
-  --foreground: 39 43% 95%;
-  --border: 226 18% 25%;
-  --input: 226 18% 25%;
-  --ring: 10 72% 62%;
-  --card: 226 24% 16%;
-  --card-foreground: 39 43% 95%;
-  --card-border: 226 18% 25%;
-  --popover: 226 24% 16%;
-  --popover-foreground: 39 43% 95%;
-  --popover-border: 226 18% 25%;
-  --primary: 10 72% 62%;
-  --primary-foreground: 226 27% 12%;
-  --secondary: 157 19% 24%;
+  --background: 230 28% 10%;
+  --foreground: 36 43% 94%;
+  --border: 230 18% 25%;
+  --input: 230 18% 25%;
+  --ring: 9 100% 68%;
+  --card: 230 24% 14%;
+  --card-foreground: 36 43% 94%;
+  --card-border: 230 18% 25%;
+  --popover: 230 24% 14%;
+  --popover-foreground: 36 43% 94%;
+  --popover-border: 230 18% 25%;
+  --primary: 9 100% 68%;
+  --primary-foreground: 230 28% 10%;
+  --secondary: 164 22% 25%;
   --secondary-foreground: 145 31% 88%;
-  --muted: 226 19% 22%;
+  --muted: 230 19% 20%;
   --muted-foreground: 224 12% 68%;
-  --accent: 44 75% 57%;
-  --accent-foreground: 226 27% 12%;
+  --accent: 46 88% 59%;
+  --accent-foreground: 230 28% 10%;
   --destructive: 0 65% 62%;
-  --destructive-foreground: 226 27% 12%;
+  --destructive-foreground: 230 28% 10%;
 }
 
 @layer base {
@@ -113,8 +113,28 @@
 .animate-soft-pop { animation: soft-pop .25s ease-out both; }
 
 .dooli-shell {
-  background-image: radial-gradient(rgba(52, 46, 38, .045) .7px, transparent .7px);
-  background-size: 13px 13px;
+  background-image: radial-gradient(rgba(36, 34, 43, .065) .7px, transparent .7px);
+  background-size: 15px 15px;
+}
+
+.landing-grid {
+  background-image: linear-gradient(rgba(44, 42, 49, .06) 1px, transparent 1px), linear-gradient(90deg, rgba(44, 42, 49, .06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+  z-index: 60;
+}
+
+.cl-formFieldInput::placeholder {
+  color: #918a83;
+  opacity: 1;
 }
 
 .serif { font-family: var(--app-font-serif); }
