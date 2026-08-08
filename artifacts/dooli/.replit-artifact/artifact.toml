@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Dooli"
+description = "A lightweight founder diary for capturing daily product-building moments, attaching proof, and turning authentic notes into build-in-public posts."
+version = "1.0.0"
+id = "artifacts/dooli"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21011
+
+[services.development]
+run = "pnpm --filter @workspace/dooli run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/dooli", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/dooli/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21011"
+BASE_PATH = "/"
